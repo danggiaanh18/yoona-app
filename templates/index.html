@@ -11,6 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- NÚT PHÁT NHẠC -->
+    <button id="playButton" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 50px; font-size: 16px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-family: 'Noto Sans', sans-serif; font-weight: 600;">
+        🎵 Phát nhạc
+    </button>
+
+    <!-- NHẠC NỀN -->
+    <audio id="bgMusic" loop>
+        <source src="/static/music/background.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="index-container">
         <img src="/static/images/idol/avatar.jpg" alt="YOONA" class="yoona-avatar">
         <div class="quote-text">Đang tải...</div>
@@ -18,5 +28,23 @@
     </div>
     
     <script src="/static/js/app.js"></script>
+    
+    <!-- JAVASCRIPT ĐIỀU KHIỂN NHẠC -->
+    <script>
+        const music = document.getElementById('bgMusic');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function() {
+            if (music.paused) {
+                music.play();
+                playButton.textContent = '🔊 Đang phát';
+                playButton.style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+            } else {
+                music.pause();
+                playButton.textContent = '🎵 Phát nhạc';
+                playButton.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        });
+    </script>
 </body>
 </html>
