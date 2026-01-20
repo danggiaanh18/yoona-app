@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "title": "You Are My Destiny",
+    "year": 2008,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/destiny.jpg",
+    "images": [
+      "/static/images/movies/destiny-1.jpg",
+      "/static/images/movies/destiny-2.jpg"
+    ],
+    "memories": [
+      {
+        "date": "2008-05-15",
+        "text": "Lần đầu tiên thấy Yoona trong vai chính, diễn xuất tự nhiên và đáng yêu"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cinderella Man",
+    "year": 2009,
+    "type": "Drama",
+    "role": "Vai phụ",
+    "cover": "/static/images/movies/cinderella.jpg",
+    "images": [
+      "/static/images/movies/cinderella-1.jpg",
+      "/static/images/movies/cinderella-2.jpg"
+    ],
+    "memories": []
+  },
+  {
+    "id": 3,
+    "title": "Love Rain",
+    "year": 2012,
+    "type": "Drama",
+    "role": "Vai chính kép",
+    "cover": "/static/images/movies/loverain.jpg",
+    "images": [
+      "/static/images/movies/loverain-1.jpg",
+      "/static/images/movies/loverain-2.jpg"
+    ],
+    "memories": [
+      {
+        "date": "2012-03-26",
+        "text": "Yoona đóng 2 vai mẹ và con gái, thể hiện diễn xuất đa dạng"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Prime Minister and I",
+    "year": 2013,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/PrimeMinisterandI.jpg",
+    "images": [
+      "/static/images/movies/PrimeMinisterandI-1.jpg",
+      "/static/images/movies/PrimeMinisterandI-2.jpg"
+    ],
+    "memories": []
+  },
+  {
+    "id": 5,
+    "title": "The K2",
+    "year": 2016,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/thek2.jpg",
+    "images": [
+      "/static/images/movies/thek2-1.jpg",
+      "/static/images/movies/thek2-2.jpg"
+    ],
+    "memories": [
+      {
+        "date": "2016-09-23",
+        "text": "Vai diễn đột phá, Yoona thể hiện khía cạnh mạnh mẽ hơn"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "God of War, Zhao Yun",
+    "title_vi": "Võ Thần Triệu Tử Long",
+    "title_cn": "武神赵子龙",
+    "year": 2016,
+    "type": "Drama",
+    "country": "China",
+    "episodes": 60,
+    "role": "Vai nữ chính",
+    "character": "Hạ Hầu Khinh Uyên",
+    "cover": "/static/images/movies/trieutulong.jpg",
+    "images": [
+       "/static/images/movies/trieutulong-1.jpg",
+      "/static/images/movies/trieutulong-2.jpg"
+    ],
+    "memories": [
+      {
+        "date": "2016-04-03",
+        "text": "Bộ phim Trung Quốc đầu tiên của Yoona, vai diễn cổ trang nữ tướng mạnh mẽ"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Confidential Assignment",
+    "year": 2017,
+    "type": "Movie",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/Confidential-Assignment.jpg",
+    "images": [
+      "/static/images/movies/Confidential-Assignment-1.jpg",
+      "/static/images/movies/Confidential-Assignment-2.jpg"
+    ],
+    "memories": [
+      {
+        "date": "2017-01-18",
+        "text": "Bộ phim điện ảnh đầu tiên của Yoona, thành công lớn tại phòng vé"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "The King Loves",
+    "year": 2017,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/Thekinglove.jpg",
+    "images": [
+      "/static/images/movies/Thekinglove-1.jpg",
+      "/static/images/movies/Thekinglove-2.jpg"
+    ],
+    "memories": []
+  },
+  {
+    "id": 9,
+    "title": "Exit",
+    "year": 2019,
+    "type": "Movie",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/exit.jpg",
+    "images": [],
+    "memories": [
+      {
+        "date": "2019-07-31",
+        "text": "Vai chính đầu tiên trên màn ảnh rộng, phim đạt 9.4 triệu lượt xem"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Hush",
+    "year": 2020,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/hush.jpg",
+    "images": [],
+    "memories": []
+  },
+  {
+    "id": 11,
+    "title": "Big Mouth",
+    "year": 2022,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/bigmouth.jpg",
+    "images": [],
+    "memories": [
+      {
+        "date": "2022-07-29",
+        "text": "Diễn xuất xuất sắc, rating cao nhất đạt 16.5%"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Confidential Assignment 2",
+    "year": 2022,
+    "type": "Movie",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/Confidential-Assignment-2.jpg",
+    "images": [],
+    "memories": []
+  },
+  {
+    "id": 13,
+    "title": "King The Land",
+    "year": 2023,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/kingtheland.jpg",
+    "images": [],
+    "memories": [
+      {
+        "date": "2023-06-17",
+        "text": "Nụ cười 'tỷ đô' của Yoona làm say đắm khán giả toàn châu Á"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Pretty Crazy",
+    "year": 2025,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/pretty-crazy.jpg",
+    "images": [],
+    "memories": [
+      {
+        "date": "2025-01-03",
+        "text": "Drama hài hước lãng mạn, Yoona vào vai nhà thiết kế thời trang"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "The Tyrant's Chef",
+    "title_vi": "Ngự Trù Bạo Chúa",
+    "title_cn": "御廚暴君",
+    "year": 2025,
+    "type": "Drama",
+    "role": "Vai chính",
+    "cover": "/static/images/movies/TheBon.jpg",
+    "images": [],
+    "memories": [
+      {
+        "date": "2025-03-01",
+        "text": "Drama cổ trang, Yoona vào vai đầu bếp hoàng cung trong triều đại Joseon"
+      }
+    ]
+  }
+]

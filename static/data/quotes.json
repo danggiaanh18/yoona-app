@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "movie_id": 1,
+    "text": "Đôi khi hạnh phúc chỉ đơn giản là được ở bên người mình yêu thương",
+    "audio": "/static/audio/quotes/quote1.mp3",
+    "mood": "romantic"
+  },
+  {
+    "id": 2,
+    "movie_id": 3,
+    "text": "Tình yêu giống như cơn mưa, đến bất chợt và thấm sâu vào trái tim",
+    "audio": "/static/audio/quotes/quote2.mp3",
+    "mood": "poetic"
+  },
+  {
+    "id": 3,
+    "movie_id": 5,
+    "text": "Dù có khó khăn đến đâu, tôi cũng sẽ bảo vệ những người tôi yêu thương",
+    "audio": "/static/audio/quotes/quote3.mp3",
+    "mood": "strong"
+  },
+  {
+    "id": 4,
+    "movie_id": 8,
+    "text": "Đừng bao giờ từ bỏ, vì phía trước luôn có ánh sáng hy vọng",
+    "audio": "/static/audio/quotes/quote4.mp3",
+    "mood": "hopeful"
+  },
+  {
+    "id": 5,
+    "movie_id": 12,
+    "text": "Nụ cười chân thành là món quà đẹp nhất ta có thể trao cho người khác",
+    "audio": "/static/audio/quotes/quote5.mp3",
+    "mood": "happy"
+  }
+]
