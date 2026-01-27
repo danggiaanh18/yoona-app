@@ -6,6 +6,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/destiny.jpg",
+    "cover_video": "/static/videos/covers/yoona.mp4",
     "images": [
       "/static/images/movies/destiny-1.jpg",
       "/static/images/movies/destiny-2.jpg"
@@ -24,6 +25,7 @@
     "type": "Drama",
     "role": "Vai phụ",
     "cover": "/static/images/movies/cinderella.jpg",
+    "cover_video": "/static/videos/covers/cinderella.mp4",
     "images": [
       "/static/images/movies/cinderella-1.jpg",
       "/static/images/movies/cinderella-2.jpg"
@@ -37,6 +39,7 @@
     "type": "Drama",
     "role": "Vai chính kép",
     "cover": "/static/images/movies/loverain.jpg",
+    "cover_video": "/static/videos/covers/loverain.mp4",
     "images": [
       "/static/images/movies/loverain-1.jpg",
       "/static/images/movies/loverain-2.jpg"
@@ -55,6 +58,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/PrimeMinisterandI.jpg",
+    "cover_video": "/static/videos/covers/primeminister.mp4",
     "images": [
       "/static/images/movies/PrimeMinisterandI-1.jpg",
       "/static/images/movies/PrimeMinisterandI-2.jpg"
@@ -68,6 +72,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/thek2.jpg",
+    "cover_video": "/static/videos/covers/thek2.mp4",
     "images": [
       "/static/images/movies/thek2-1.jpg",
       "/static/images/movies/thek2-2.jpg"
@@ -91,8 +96,9 @@
     "role": "Vai nữ chính",
     "character": "Hạ Hầu Khinh Uyên",
     "cover": "/static/images/movies/trieutulong.jpg",
+    "cover_video": "/static/videos/covers/trieutulong.mp4",
     "images": [
-       "/static/images/movies/trieutulong-1.jpg",
+      "/static/images/movies/trieutulong-1.jpg",
       "/static/images/movies/trieutulong-2.jpg"
     ],
     "memories": [
@@ -109,6 +115,7 @@
     "type": "Movie",
     "role": "Vai chính",
     "cover": "/static/images/movies/Confidential-Assignment.jpg",
+    "cover_video": "/static/videos/covers/confidential.mp4",
     "images": [
       "/static/images/movies/Confidential-Assignment-1.jpg",
       "/static/images/movies/Confidential-Assignment-2.jpg"
@@ -127,6 +134,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/Thekinglove.jpg",
+    "cover_video": "/static/videos/covers/thekinglove.mp4",
     "images": [
       "/static/images/movies/Thekinglove-1.jpg",
       "/static/images/movies/Thekinglove-2.jpg"
@@ -140,6 +148,7 @@
     "type": "Movie",
     "role": "Vai chính",
     "cover": "/static/images/movies/exit.jpg",
+    "cover_video": "/static/videos/covers/exit.mp4",
     "images": [],
     "memories": [
       {
@@ -155,6 +164,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/hush.jpg",
+    "cover_video": "/static/videos/covers/hush.mp4",
     "images": [],
     "memories": []
   },
@@ -165,6 +175,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/bigmouth.jpg",
+    "cover_video": "/static/videos/covers/bigmouth.mp4",
     "images": [],
     "memories": [
       {
@@ -180,6 +191,7 @@
     "type": "Movie",
     "role": "Vai chính",
     "cover": "/static/images/movies/Confidential-Assignment-2.jpg",
+    "cover_video": "/static/videos/covers/confidential2.mp4",
     "images": [],
     "memories": []
   },
@@ -190,6 +202,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/kingtheland.jpg",
+    "cover_video": "/static/videos/covers/kingtheland.mp4",
     "images": [],
     "memories": [
       {
@@ -205,6 +218,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/pretty-crazy.jpg",
+    "cover_video": "/static/videos/covers/prettycrazy.mp4",
     "images": [],
     "memories": [
       {
@@ -222,6 +236,7 @@
     "type": "Drama",
     "role": "Vai chính",
     "cover": "/static/images/movies/TheBon.jpg",
+    "cover_video": "/static/videos/covers/thebon.mp4",
     "images": [],
     "memories": [
       {

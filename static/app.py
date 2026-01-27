@@ -4,7 +4,6 @@ import os
 
 app = Flask(__name__)
 
-# Load JSON data
 def load_json(filename):
     filepath = os.path.join('static', 'data', filename)
     try:
@@ -29,7 +28,10 @@ def movie(movie_id):
 def timeline():
     return render_template("timeline.html")
 
-# API endpoints for JSON data
+@app.route("/fanmeeting")
+def fanmeeting():
+    return render_template("fanmeeting.html")
+
 @app.route("/api/movies")
 def api_movies():
     return jsonify(load_json('movies.json'))
@@ -51,6 +53,10 @@ def api_songs():
 @app.route("/api/timeline")
 def api_timeline():
     return jsonify(load_json('timeline.json'))
+
+@app.route("/api/fanmeetings")
+def api_fanmeetings():
+    return jsonify(load_json('fanmeetings.json'))
 
 if __name__ == "__main__":
     print("=" * 50)

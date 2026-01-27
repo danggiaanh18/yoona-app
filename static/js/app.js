@@ -516,3 +516,166 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
     console.log('✅ Đang chạy như PWA standalone');
     installBtn.style.display = 'none';
 }
+// ========== FANMEETING PAGE ==========
+if (window.location.pathname === '/fanmeeting') {
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const response = await fetch('/api/fanmeetings');
+            const fanmeetings = await response.json();
+            
+            const grid = document.querySelector('.fanmeeting-grid');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Calculate stats
+            const totalEvents = fanmeetings.length;
+            const uniqueCities = new Set(fanmeetings.map(fm => fm.location)).size;
+            const totalFans = fanmeetings.reduce((sum, fm) => {
+                const num = parseInt(fm.attendees.replace(/,/g, ''));
+                return sum + (isNaN(num) ? 0 : num);
+            }, 0);
+            
+            // Update stats if elements exist
+            const totalEventsEl = document.getElementById('totalEvents');
+            const totalCitiesEl = document.getElementById('totalCities');
+            const totalFansEl = document.getElementById('totalFans');
+            
+            if (totalEventsEl) totalEventsEl.textContent = totalEvents;
+            if (totalCitiesEl) totalCitiesEl.textContent = uniqueCities;
+            if (totalFansEl) totalFansEl.textContent = totalFans.toLocaleString();
+            
+            // Render fanmeeting cards
+            function renderFanmeetings(filter = 'all') {
+                grid.innerHTML = '';
+                
+                let filtered = fanmeetings;
+                
+                // Filter by type (solo, group, drama) or country
+                if (filter !== 'all') {
+                    if (['solo', 'group', 'drama'].includes(filter)) {
+                        filtered = fanmeetings.filter(fm => fm.type === filter);
+                    } else {
+                        filtered = fanmeetings.filter(fm => fm.country === filter);
+                    }
+                }
+                
+                // Sort by date (newest first)
+                filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                filtered.forEach(fm => {
+                    const card = document.createElement('div');
+                    card.className = 'fanmeeting-card';
+                    
+                    // Type badge
+                    const typeEmoji = {
+                        'solo': '👤 Solo',
+                        'group': '👥 SNSD',
+                        'drama': '🎭 Drama'
+                    };
+                    
+                    card.innerHTML = `
+                        <img src="${fm.cover}" alt="${fm.title}" class="fanmeeting-cover" 
+                             onerror="this.src='https://via.placeholder.com/300x200/6BCF7F/ffffff?text=Yoona+FM'">
+                        <div class="fanmeeting-info">
+                            <span class="fanmeeting-type">${typeEmoji[fm.type] || fm.type}</span>
+                            <div class="fanmeeting-title">${fm.title}</div>
+                            <div class="fanmeeting-meta">
+                                <div class="fanmeeting-location">
+                                    📍 ${fm.location}
+                                </div>
+                                <div class="fanmeeting-date">
+                                    📅 ${new Date(fm.date).toLocaleDateString('vi-VN')}
+                                </div>
+                                <div style="color: #6BCF7F; font-weight: 600;">
+                                    👥 ${fm.attendees} người
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    card.addEventListener('click', () => openFanmeetingModal(fm));
+                    grid.appendChild(card);
+                });
+                
+                // Show message if no results
+                if (filtered.length === 0) {
+                    grid.innerHTML = '<p style="text-align:center; color:#999; grid-column: 1/-1;">Không có fanmeeting nào</p>';
+                }
+            }
+            
+            // Filter buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderFanmeetings(btn.dataset.filter);
+                });
+            });
+            
+            // Initial render
+            renderFanmeetings();
+            
+        } catch (error) {
+            console.error('Error loading fanmeetings:', error);
+            document.querySelector('.fanmeeting-grid').innerHTML = 
+                '<p style="text-align:center; color:#999;">Không thể tải dữ liệu fanmeeting</p>';
+        }
+    });
+}
+
+// Open fanmeeting modal
+function openFanmeetingModal(fm) {
+    const modal = document.getElementById('fanmeetingModal');
+    const modalBody = modal.querySelector('.modal-body');
+    
+    const typeEmoji = {
+        'solo': '👤 Solo Tour',
+        'group': '👥 SNSD Group',
+        'drama': '🎭 Drama Fanmeeting'
+    };
+    
+    modalBody.innerHTML = `
+        <img src="${fm.cover}" alt="${fm.title}" class="modal-header-img" 
+             onerror="this.src='https://via.placeholder.com/800x300/6BCF7F/ffffff?text=Yoona+Fanmeeting'">
+        <h2 class="modal-title">${fm.title}</h2>
+        
+        <div class="modal-details">
+            <div class="modal-detail-item">
+                🎪 <strong>Loại:</strong> ${typeEmoji[fm.type] || fm.type}
+            </div>
+            <div class="modal-detail-item">
+                📅 <strong>Ngày:</strong> ${new Date(fm.date).toLocaleDateString('vi-VN', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                })}
+            </div>
+            <div class="modal-detail-item">
+                📍 <strong>Địa điểm:</strong> ${fm.location}
+            </div>
+            <div class="modal-detail-item">
+                👥 <strong>Số lượng fan:</strong> ${fm.attendees} người
+            </div>
+        </div>
+        
+        <div class="modal-description">
+            ${fm.description}
+        </div>
+        
+        ${fm.images && fm.images.length > 0 ? `
+            <h3 style="margin-bottom: 1rem;">📸 Hình ảnh</h3>
+            <div class="modal-gallery">
+                ${fm.images.map(img => `<img src="${img}" alt="Fanmeeting">`).join('')}
+            </div>
+        ` : ''}
+    `;
+    
+    modal.classList.add('active');
+}
+
+// Close modal
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('fanmeetingModal');
+    if (e.target.classList.contains('close-modal') || e.target === modal) {
+        modal.classList.remove('active');
+    }
+});

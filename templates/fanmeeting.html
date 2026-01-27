@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#6BCF7F">
+    <title>Fanmeeting - YOONA</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fanmeeting-container">
+        <!-- Header -->
+        <div class="header" style="border-radius: 0 0 30px 30px; margin-bottom: 2rem;">
+            <h1>💝 YOONA FANMEETING</h1>
+            <p>Những buổi gặp gỡ đáng nhớ với fan (2012-2025)</p>
+        </div>
+        
+        <!-- Filter buttons -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="solo">👤 Solo</button>
+            <button class="filter-btn" data-filter="group">👥 SNSD</button>
+            <button class="filter-btn" data-filter="drama">🎭 Drama</button>
+            <button class="filter-btn" data-filter="korea">🇰🇷 Hàn Quốc</button>
+            <button class="filter-btn" data-filter="japan">🇯🇵 Nhật Bản</button>
+            <button class="filter-btn" data-filter="china">🇨🇳 Đại Trung Hoa</button>
+            <button class="filter-btn" data-filter="others">🌏 Khác</button>
+        </div>
+        
+        <!-- Stats -->
+        <div class="fm-stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalEvents">0</div>
+                <div class="stat-label">Sự kiện</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="totalCities">0</div>
+                <div class="stat-label">Thành phố</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="totalFans">0</div>
+                <div class="stat-label">Fan tham dự</div>
+            </div>
+        </div>
+        
+        <!-- Fanmeeting Grid -->
+        <div class="fanmeeting-grid"></div>
+    </div>
+    
+    <!-- Modal chi tiết -->
+    <div class="fanmeeting-modal" id="fanmeetingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+    
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="/home" class="nav-item">
+            <span class="nav-icon">🎬</span>
+            <span>Phim</span>
+        </a>
+        <a href="/timeline" class="nav-item">
+            <span class="nav-icon">📅</span>
+            <span>Timeline</span>
+        </a>
+        <a href="/fanmeeting" class="nav-item active">
+            <span class="nav-icon">💝</span>
+            <span>Fanmeeting</span>
+        </a>
+    </nav>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

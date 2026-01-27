@@ -1307,3 +1307,256 @@ body {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-25px) rotate(5deg); }
 }
+/* ========== FANMEETING PAGE ========== */
+.fanmeeting-container {
+    padding: 1rem;
+    padding-bottom: 100px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    scrollbar-width: none;
+}
+
+.filter-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    background: white;
+    border: 2px solid #E8E8E8;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #6BCF7F, #4A9B6F);
+    color: white;
+    border-color: #6BCF7F;
+}
+
+.fanmeeting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.fanmeeting-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fanmeeting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(107, 207, 127, 0.3);
+}
+
+.fanmeeting-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.fanmeeting-info {
+    padding: 1rem;
+}
+
+.fanmeeting-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.fanmeeting-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 13px;
+    color: #666;
+}
+
+.fanmeeting-location {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.fanmeeting-date {
+    color: #6BCF7F;
+    font-weight: 600;
+}
+
+/* Modal */
+.fanmeeting-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    overflow-y: auto;
+}
+
+.fanmeeting-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    margin: 2rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: #6BCF7F;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-header-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.modal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #F8F8F8;
+    border-radius: 15px;
+}
+
+.modal-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+}
+
+.modal-description {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fanmeeting-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+}
+.fanmeeting-type {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: linear-gradient(135deg, #6BCF7F, #4A9B6F);
+    color: white;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* Stats Section */
+.fm-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #6BCF7F;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #666;
+}
