@@ -141,7 +141,10 @@
     "cover": "https://i.pinimg.com/736x/m1/n2/o3/m1n2o3p4q5r6s7t8u9v0w1x2y3z4a5b6.jpg",
     "description": "Fanmeeting tại Macau với không gian sang trọng và những màn trình diễn ấn tượng từ Yoona.",
     "type": "solo",
-    "images": []
+    "images": [
+      "static/images/fanmeetings/macau.jpg",
+      "static/images/fanmeetings/macau1.jpg"
+    ]
   },
   {
     "id": 13,
